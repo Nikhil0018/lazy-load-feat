@@ -1,2 +1,21 @@
-<p>header works!</p>
+<div class="header">
+    <div class="route-item">
+        <a class="pointer-none">
+            <img src="https://cdn-icons-png.flaticon.com/128/447/447144.png">
+            <h5 class="text">My Space</h5>
+        </a>
+    </div>
+
+    <ul class="routes-wrapper">
+        <li 
+            *ngFor="let route of navigationRoutes" 
+            class="route-item"
+            >
+            <a [routerLink]="[route.routePath]" [ngClass]="{'selected': selectedRouteId === route.id}">
+                <img [src]="route.icon">
+                <h5 class="text">{{ route.name }}</h5>
+            </a>
+        </li>
+    </ul>
+</div>
 <router-outlet></router-outlet>
