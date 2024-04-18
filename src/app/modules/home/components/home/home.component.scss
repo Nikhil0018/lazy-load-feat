@@ -1,0 +1,32 @@
+:host {
+    .home-wrapper {
+        height: calc(100vh - var(--header-height));
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 31vw;
+            font-weight: bold;
+            color: orange;
+            z-index: 1;
+            font-family: sans-serif;
+        }
+
+        img {
+            width: 12vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-58%, -68%);
+            z-index: 2;
+        }
+    }
+}
