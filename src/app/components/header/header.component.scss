@@ -41,7 +41,8 @@
                     transition: 0.3s all;
                 }
 
-                &:hover, &.selected {
+                &:hover,
+                &.selected {
                     img {
                         filter: invert(1);
                     }
@@ -53,6 +54,58 @@
 
             }
 
+        }
+    }
+}
+
+@media screen and (max-width: 740px) {
+    :host {
+        .header {
+            .routes-wrapper {
+                gap: 4px;
+            }
+
+            .route-item {
+                a {
+                    padding-inline: 6px;
+                    gap: 6px;
+
+                    img {
+                        height: 18px;
+                        width: 18px;
+                    }
+
+                    .text {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 526px) {
+    :host {
+        .header {
+            .routes-wrapper {
+                gap: 0px;
+            }
+
+            .route-item {
+                a {
+                    gap: 4px;
+                    padding-inline: 6px;
+
+                    img {
+                        height: 11px;
+                        width: 11px;
+                    }
+
+                    .text {
+                        font-size: 0.5rem;
+                    }
+                }
+            }
         }
     }
 }
