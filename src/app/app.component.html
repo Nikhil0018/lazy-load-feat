@@ -1,1 +1,9 @@
 <router-outlet></router-outlet>
+
+<div 
+    class="icon-wrapper" 
+    [ngClass]="{'light': !isDarkMode, 'dark' : isDarkMode}"
+    (click)="toggleTheme()">
+    <img *ngIf="!isDarkMode" [src]="darkModeIconUrl">
+    <img *ngIf="isDarkMode" [src]="lightModeIconUrl">
+</div>
